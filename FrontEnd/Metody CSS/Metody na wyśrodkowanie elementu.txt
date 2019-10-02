@@ -1,0 +1,30 @@
+/* wyœrodkowuje za pomoc¹ transform absolute translate() */
+
+#section div {position: relative;}
+#section div img {
+	position:absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+/* wyœrodkowanie za pomoc¹ flex */
+
+#section div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* jak nie dzia³a sprawdz prefiksy */
+
+/* podobny sposób te¿ na flex-sie */
+
+#section div {
+	display: flex;
+}
+
+#section div img {
+	align-self: center;
+	margin: 0 auto;
+}

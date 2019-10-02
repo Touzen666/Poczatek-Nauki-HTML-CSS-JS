@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html leng='pl'>
+
+<head>
+    
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Monda:400,700" rel="stylesheet">
+    <title>
+    Neon
+    </title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            height: 100vh;
+            background-color: black;
+            display: flex;
+        }
+        button{
+            position: absolute;
+            left: 5%;
+            top: 5%;
+        }
+        ul{
+            margin: auto;
+        }
+        li{
+            color: yellow;
+            display: inline-block;
+            font-size: 40px;
+            font-family: "Monda";
+            font-weight: bold;
+            letter-spacing: 4px;
+            text-shadow: 0 0 30px white, 0 0 10px yellow;
+            transition: opacity 0.5s;
+        }
+        li:nth-child(15){
+            transform: rotate(15deg) translateY(4px);
+            animation: neon 2s infinite linear;
+        }
+    
+        .off{
+            opacity: 0;
+        }
+        
+        @keyframes neon {
+            0%{
+                opacity: 0;
+                transform: scale(1);
+            }
+            5%{opacity: 1;}
+            20%{opacity: 0.5;}
+            25%{opacity: 1;}
+            30%{opacity: 1;}
+            32%{opacity: 0.5;}
+            45%{opacity: 1;}
+            46%{opacity: 1;}
+            54%{opacity: 0.5}
+            61%{opacity: 1;}
+            77%{opacity: 0.5;}
+            81%{opacity: 1;}
+            95%{opacity: 1;}
+            98%{opacity: 0.6;}
+            100%{opacity: 1;}
+        }
+        
+        
+    </style>
+    </head>
+
+<body>
+    
+    <button>WŁĄCZ</button>
+    <ul>
+    <li>B</li>
+    <li>A</li>
+    <li>R</li>
+    <li>T</li>
+    <li>O</li>
+    <li>S</li>
+    <li>Z</li>
+    <li>.</li>
+    <li>O</li>
+    <li>-</li>
+    <li>S</li>
+    <li>T</li>
+    <li>R</li>
+    <li>O</li>
+    <li>N</li>
+    <li>K</li>
+    <li>A</li>
+    </ul>
+    
+    <script>
+    var button = document.querySelector("button")
+    this.addEventListener("click", function()
+    {
+    if(this.textContent =="WŁĄCZ") {
+        this.textContent == "WYŁĄCZ";
+    }
+        else{
+            this.textContent = "WŁĄCZ";}
+             const letters =
+                   document.querySelectorAll("li");
+             for(var i = 0; letters.length > i; i++){
+                 letters[i].classList.toggle("off");
+             }
+    })
+    
+    </script>
+    
+    
+    </body>
+
+
+</html>
